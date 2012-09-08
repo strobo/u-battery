@@ -206,6 +206,7 @@ void setBatteryFlag(void)
 static
 void checkBatteryStatus(void){
 	GPIO2DATA ^= _BV(0); /* led0 on */
+	if(getMonitorStatus() == 1) wakeBq29312a();
 	writeBQ29312A(FUNCTION_CTL, VMEN); /* enable voltage monitoring */
 	/* -------------------------------------------- */
 	//writeBQ29312A(CELL_SEL, 0b00001100);
@@ -275,17 +276,11 @@ void checkBatteryStatus(void){
 	//}
 
 	/* Low voltage alert */
-	if(battery.vcellf[0] <= 3.6)
-	{
-		battery.batlow = 1;
-		GPIO2DATA |= _BV(0); // led0 off
-	}
-	else if(battery.vcellf[1] <= 3.6)
-	{
-		battery.batlow = 1;
-		GPIO2DATA |= _BV(0); // led0 off
-	}
-	else if(battery.vcellf[2] <= 3.6)
+	if(
+		(battery.vcellf[0] <= 3.6) ||
+		(battery.vcellf[1] <= 3.6) ||
+		(battery.vcellf[2] <= 3.6)
+	)
 	{
 		battery.batlow = 1;
 		GPIO2DATA |= _BV(0); // led0 off
@@ -296,23 +291,18 @@ void checkBatteryStatus(void){
 	}
 
 	/* Low voltage shutdown */
-	if(battery.vcellf[0] <= 3.4)
+	if(
+		(battery.vcellf[0] <= 3.4) ||
+		(battery.vcellf[1] <= 3.4) ||
+		(battery.vcellf[2] <= 3.4)
+	)
 	{
 		setDCDC(0);
 		setDsgFet(0);
-		/* Todo Enter deep sleep */
-	}
-	else if(battery.vcellf[1] <= 3.4)
-	{
-		setDCDC(0);
-		setDsgFet(0);
-		/* Todo Enter deep sleep */
-	}
-	else if(battery.vcellf[2] <= 3.4)
-	{
-		setDCDC(0);
-		setDsgFet(0);
-		/* Todo Enter deep sleep */
+		sleepBq29312a();
+		shipBq29312a(); /* BQ29312A enter ShipMode. The way to return to NormalMode is only HardwareReset */
+		__disable_irq();
+		/* Todo: lpc1114 will enter deepsleep mode */
 	}
 	else
 	{

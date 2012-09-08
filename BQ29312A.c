@@ -5,6 +5,7 @@
 
 static volatile I2CCTRL I2cCtrl;	/* Control structure for I2C transaction */
 static volatile int8_t I2cBuff[4];	/* I2C read/write buffer */
+static volatile BQ29312_STATUS batteryMonitorStatus;
 static volatile FET_STATUS fet;
 
 /*-----------------------------------------------*/
@@ -35,6 +36,34 @@ uint8_t readBQ29312A (uint8_t reg)
 	i2c0_start(&I2cCtrl);
 	while (!I2cCtrl.stat) ;
 	return ((uint8_t)I2cBuff[0]);
+}
+void shipBq29312a(void)
+{
+	/* Ship mode */
+	/* FET      : OFF */
+	/* 3.3V REG : OFF */
+	/* LPC1114 will down because 3.3V REG:OFF */
+	/* but when DC_in is connected, BQ29312A will not enter ship mode */
+	writeBQ29312A(STATE_CTL, 0x02);
+	batteryMonitorStatus.ship = 1;
+}
+
+void sleepBq29312a(void)
+{
+	/* Ship mode */
+	/* FET      : OFF */
+	/* 3.3V REG : ON */
+	writeBQ29312A(STATE_CTL, 0x01);
+	batteryMonitorStatus.sleep = 1;
+}
+void wakeBq29312a(void)
+{
+	writeBQ29312A(STATE_CTL, 0x00);
+	batteryMonitorStatus.sleep = 0;
+}
+uint8_t getMonitorStatus(void)
+{
+	return batteryMonitorStatus.sleep;
 }
 void setChgFet(uint8_t state)
 {
@@ -86,6 +115,8 @@ void clearWdtFlag(void)
 void initBQ29312A(void)
 {
 	fet.dsg = fet.chg = 0;
+	batteryMonitorStatus.sleep = 0;
+	batteryMonitorStatus.ship = 0;
 	/* Initialize I2C module */
 	i2c0_init();
 

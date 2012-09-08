@@ -35,12 +35,20 @@ typedef enum FET_CH {
 } FET_CH_t;
 
 typedef struct {
-	uint8_t dsg;			/*  */
-	uint8_t chg;			/*  */
+	uint8_t dsg;			/* status of DSG FET */
+	uint8_t chg;			/* status of CHG FET */
 } FET_STATUS;
+
+typedef struct {
+	uint8_t sleep;			/*  */
+	uint8_t ship;
+} BQ29312_STATUS;
 
 void writeBQ29312A(uint8_t reg, uint8_t data);
 uint8_t readBQ29312A(uint8_t reg);
+void sleepBq29312a(void);
+void wakeBq29312a(void);
+uint8_t getMonitorStatus(void);
 void setChgFet(uint8_t state);
 void setDsgFet(uint8_t state);
 void setFet(FET_CH_t ch, uint8_t stat);
