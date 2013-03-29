@@ -44,8 +44,8 @@ lpc1114のクロック回路も実装不要です。
 * チップICの実装はフラックスを使った方がいい。というか使うべき
 * R35からR44までの抵抗ですが471Ωから500Ωぐらいかな
 * 当然ですが背の低い部品、小さい部品からハンダ付けしていかないと後で面倒なことになるので注意
-* 完成イメージは**IMG_20130329_181824.jpg**と**IMG_20130329_230819.jpg**です
-* あとは**assembly-guide.jpg**をみてください
+* 完成イメージは **IMG_20130329_181824.jpg**と **IMG_20130329_230819.jpg**です
+* あとは **assembly-guide.jpg**をみてください
 
 ###回路について
 充電回路はマイコン(LPC1114)からON/OFFの制御ができます。
@@ -79,7 +79,7 @@ LEDアレイの抵抗R35からR44は画像だといろんな値の抵抗が実�
 バッテリーはリチウムポリマー電池で。3セル直列の11.1Vのものを使用してください。容量は自由です。
 
 ###使用している主なパーツのデータシート
-#####リチウムイオンバッテリー
+#####リチウムポリマーバッテリー
 *Turnigy 5000mAh 3S 25C Lipo Pack* <http://www.hobbyking.com/hobbyking/store/uh_viewItem.asp?idProduct=9183>
 
 #####充電器
@@ -89,7 +89,7 @@ LEDアレイの抵抗R35からR44は画像だといろんな値の抵抗が実�
 *LPC1114* <http://ics.nxp.com/support/documents/microcontrollers/pdf/user.manual.lpc11xx.lpc11cxx.jp.pdf>
 
 #####DC-DC Converter
-*BD9876* IntFET sync 3A <http://www.rohm.co.jp/products/databook/power/pdf/bd9876efj-j.pdf>
+*BD9876* IntFET sync 3A <http://rohmfs.rohm.com/jp/products/databook/datasheet/ic/power/switching_regulator/bd9876efj-j.pdf>
 
 #####BatteryCharger
 *MAX1873SEEE+* <http://datasheets.maxim-ic.com/jp/ds/MAX1873_jp.pdf>
