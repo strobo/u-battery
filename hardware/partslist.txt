@@ -1,0 +1,135 @@
+Partlist
+
+Exported from mobileCharger.brd at 2013/03/29 19:46
+
+EAGLE Version 6.2.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part     Value           Package                 Library               Position (mm)         Orientation
+
+B1                       EVQ-Q2                  microbuilder          (90 25)               R90
+C1       10u             0805                    SparkFun-Passives     (61.722 27.178)       R270
+C2       0.01u           0603-CAP                SparkFun              (71.374 26.416)       MR0
+C3       0.1u            0603-CAP                SparkFun              (88.138 25.908)       MR270
+C4       47u             1206                    SparkFun-Passives     (71.374 14.732)       R180
+C6       6800p           0603-CAP                SparkFun              (76.454 29.21)        R0
+C7       330u            CPOL-RADIAL-100UF-25V   SparkFun-Passives     (95.504 32.766)       R90
+C8       10u             0805                    SparkFun-Passives     (24.13 22.098)        R180
+C9       1u              0603-CAP                SparkFun              (22.098 47.498)       R180
+C10      0.1u            0603-CAP                SparkFun              (17.272 22.098)       R180
+C11      0.1u            0603-CAP                SparkFun              (17.272 24.638)       R180
+C12      0.1u            0603-CAP                SparkFun              (17.272 27.178)       R180
+C13      1u              0603-CAP                SparkFun              (18.542 41.656)       R90
+C14      0.22u           0603-CAP                SparkFun              (20.828 41.656)       R90
+C15      0.1u            0603-CAP                SparkFun              (17.272 29.718)       R180
+C16      0.1u            0603-CAP                SparkFun              (58.42 8.382)         MR90
+C17      10u             0805                    SparkFun-Passives     (9.398 6.604)         MR270
+C18      10u             0805                    SparkFun-Passives     (24.13 37.338)        R270
+C19      47n             0603-CAP                SparkFun              (33.274 42.926)       R0
+C20      47n             0603-CAP                SparkFun              (33.274 40.386)       R0
+C21      0.1u            0603-CAP                SparkFun              (36.576 45.212)       R180
+C22      330u            E3,5-8                  rcl                   (20.092 35.582)       R180
+C23      330u            E3,5-8                  rcl                   (32.766 15.24)        R270
+C24      1n              0603-CAP                SparkFun              (36.576 40.386)       R0
+C25      0.1u            0603-CAP                SparkFun              (16.256 14.224)       R270
+C26      1u              0603-CAP                SparkFun              (11.684 2.286)        R0
+C27      18p             0603-CAP                SparkFun              (46.228 2.286)        R270
+C28      18p             0603-CAP                SparkFun              (28.956 2.286)        R270
+C29      0.1u            0603-CAP                SparkFun              (44.704 9.144)        MR90
+C30      0.1u            0603-CAP                SparkFun              (51.816 10.414)       MR180
+C31      1u              0603-CAP                SparkFun              (54.864 7.366)        MR90
+C32      1u              0603-CAP                SparkFun              (20.32 20.066)        MR270
+CN1                      USB_HOST-PTH            microbuilder          (48 45)               R180
+CN2                      USB_HOST-PTH            microbuilder          (67 45)               R180
+CN3                      USB_HOST-PTH            microbuilder          (86 45)               R180
+D1                       LED_BARGAPH_10          SparkFun-LED          (81.026 6.35)         R0
+D2       DIODE-SCHOTTKY  SOD-128                 strobo-lib            (20.69 42.944)        MR180
+D3       DIODE-SCHOTTKY  SOD-128                 strobo-lib            (27.432 29.718)       R0
+D4       DIODE-SCHOTTKY  SOD-128                 strobo-lib            (67.818 22.606)       R0
+D5       CMS01           M-FLAT                  strobo-lib            (55.118 30.988)       R0
+D6       CMS01           M-FLAT                  strobo-lib            (55.118 25.146)       R0
+D7                       SOD523                  SparkFun-DiscreteSemi (16.256 11.303)       R270
+D8                       SOD523                  SparkFun-DiscreteSemi (16.256 6.604)        R90
+IC1      TLV272          SO08                    SparkFun              (91.948 22.86)        MR0
+IC2      BD9876          SO08                    strobo-lib            (69.85 29.718)        R90
+IC3      S-8120C         SC-82AB                 strobo-lib            (23.368 20.066)       MR90
+IC4      SI4435DDY       SO08                    SparkFun-DiscreteSemi (20.574 8.89)         R180
+IC5      SI4435DDY       SO08                    SparkFun-DiscreteSemi (26.162 8.89)         R180
+IC6      SI4435DDY       SO08                    SparkFun-DiscreteSemi (34.036 36.068)       R270
+J1       POWER_JACKPTH   POWER_JACK_PTH          SparkFun-Connectors   (-1 39)               R270
+L1       15u             CDRH125                 SparkFun-Passives     (40.132 26.416)       R0
+L2       15u             CDRH125                 SparkFun-Passives     (80.264 19.558)       R0
+Q1       BSH105          SOT23-3                 SparkFun-DiscreteSemi (47.244 46.99)        MR270
+Q2       BSH105          SOT23-3                 SparkFun-DiscreteSemi (47.244 43.434)       MR270
+R1       120k            0603-RES                SparkFun              (76.454 33.782)       R0
+R2       30k             0603-RES                SparkFun              (76.454 31.496)       R180
+R3       1k              0603-RES                SparkFun              (93.218 16.51)        MR90
+R4       10k             0603-RES                SparkFun-Passives     (79.756 29.21)        R180
+R5       0.01            R1206                   rcl                   (91.694 13.208)       MR180
+R6       100             0603-RES                SparkFun              (13.97 22.098)        R0
+R7       1k              0603-RES                SparkFun              (90.424 16.51)        MR90
+R8       10k             0603-RES                SparkFun              (95.758 16.51)        MR90
+R9       10k             0603-RES                SparkFun              (87.884 16.51)        MR270
+R10      2k              0603-RES                SparkFun              (95.758 21.082)       MR90
+R11      18k             0603-RES                SparkFun              (95.758 24.13)        MR90
+R12      100             0603-RES                SparkFun              (13.97 24.638)        R0
+R13      100             0603-RES                SparkFun              (13.97 27.178)        R0
+R14      100             0603-RES                SparkFun              (13.97 29.718)        R0
+R15      100k            0603-RES                SparkFun              (15.494 2.286)        R0
+R16      100             0603-RES                SparkFun              (58.42 15.24)         MR0
+R17      1M              0603-RES                SparkFun              (25.4 14.478)         R180
+R18      1M              0603-RES                SparkFun              (19.812 14.478)       R180
+R19      0.05            R2512                   resistor              (29.464 22.098)       R180
+R20      100k            0603-RES                SparkFun              (25.908 47.498)       R180
+R21      0.01            R1206                   rcl                   (7.086 17.452)        R0
+R22      100k            0603-RES                SparkFun              (7.874 2.286)         R180
+R23      100k            0603-RES                SparkFun              (29.464 47.498)       R180
+R24      100k            0603-RES                SparkFun              (33.02 47.498)        R0
+R25      10k             0603-RES                SparkFun              (36.576 42.926)       R0
+R26      30k             0603-RES                SparkFun              (51.562 35.306)       R180
+R27      10k             0603-RES                SparkFun              (47.962 35.302)       R180
+R28      27k             0603-RES                SparkFun              (44.45 35.306)        R180
+R29      30k             0603-RES                SparkFun              (70.612 35.306)       R180
+R30      4.7k            0603-RES                SparkFun              (25.4 17.018)         R180
+R31      4.7k            0603-RES                SparkFun              (19.812 17.018)       R0
+R32      33k             0603-RES                SparkFun              (36.576 47.498)       R0
+R33      100k            0603-RES                SparkFun              (51.308 43.434)       MR90
+R34      100k            0603-RES                SparkFun              (51.308 46.99)        MR90
+R35      500             0603-RES                SparkFun              (69.596 5.588)        MR90
+R36      500             0603-RES                SparkFun              (72.136 5.588)        MR90
+R37      500             0603-RES                SparkFun              (74.676 5.588)        MR90
+R38      500             0603-RES                SparkFun              (77.216 5.588)        MR90
+R39      500             0603-RES                SparkFun              (79.756 5.588)        MR90
+R40      500             0603-RES                SparkFun              (82.296 5.588)        MR90
+R41      500             0603-RES                SparkFun              (84.836 5.588)        MR90
+R42      500             0603-RES                SparkFun              (87.376 5.588)        MR90
+R43      500             0603-RES                SparkFun              (89.916 5.588)        MR90
+R44      500             0603-RES                SparkFun              (92.456 5.588)        MR90
+R45      10k             0603-RES                SparkFun              (43.942 12.446)       MR180
+R46      100k            0603-RES                SparkFun              (51.562 18.288)       MR0
+R47      10k             0603-RES                SparkFun              (67.056 35.306)       R180
+R48      27k             0603-RES                SparkFun              (63.5 35.306)         R180
+R49      4.7k            0603-RES                SparkFun              (53.594 1.524)        MR180
+R50      4.7k            0603-RES                SparkFun              (53.594 3.556)        MR180
+R51      100             0603-RES                SparkFun              (54.864 10.668)       MR270
+SJ1                      SJ_2                    SparkFun-Passives     (20.574 2.54)         R0
+SJ2                      SJ_2S-NO                SparkFun-Passives     (31.242 10.668)       R270
+SWD                      1X03                    SparkFun-Connectors   (66.294 10.16)        R180
+TP1      TPSPAD1-13      P1-13                   testpad               (2.032 16.51)         R270
+TP2      TPSPAD1-13      P1-13                   testpad               (2.032 13.462)        R270
+TP3      TPSPAD1-13      P1-13                   testpad               (2.032 10.414)        R270
+TP4      TPSPAD1-13      P1-13                   testpad               (2.032 7.334)         R270
+TP5      TPSPAD1-13      P1-13                   testpad               (61.214 15.24)        R0
+TP6      TPSPAD1-13      P1-13                   testpad               (63.754 15.24)        R0
+TP7      TPSPAD1-13      P1-13                   testpad               (39.624 46.228)       R0
+TP8      TPSPAD1-13      P1-13                   testpad               (35.814 8.89)         R90
+U$1      MOUNTINGHOLE2.0 MOUNTINGHOLE_2.0_PLATED microbuilder          (4 46)                R180
+U$2      MOUNTINGHOLE2.0 MOUNTINGHOLE_2.0_PLATED microbuilder          (4 4)                 R0
+U$3      MOUNTINGHOLE2.0 MOUNTINGHOLE_2.0_PLATED microbuilder          (96 4)                R0
+U$7      MOUNTINGHOLE2.0 MOUNTINGHOLE_2.0_PLATED microbuilder          (96 46)               R180
+U2       LPC1114         LQFP48                  microbuilder          (51.816 8.89)         R0
+U3       BQ29312A        TSSOP-24                strobo-lib            (10.668 8.89)         R180
+U4       MAX1873         TSSOP16                 strobo-lib            (27.178 42.672)       R90
+X4       ST-S4B-XH-A     B4B-XH                  con-jst-xh            (9.254 26)            R270
+Y1       12MHz           HC49UP                  SparkFun-FreqCtrl     (37.592 4.572)        R0
